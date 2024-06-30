@@ -19,6 +19,6 @@ resource "aws_instance" "app_server" {
   key_name = "alura-acesso-aws"
 
   tags = {
-    Name = "ExampleAppServerInstance"
+    Name = "alura-aws"
   }
 }
