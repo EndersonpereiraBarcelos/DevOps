@@ -17,3 +17,6 @@ crash.log
 *.tfvars
 
 *.pem
+*pub
+iac-dev
+iac-prod

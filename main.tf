@@ -10,15 +10,24 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region = "us-west-2"
 }
 
 resource "aws_instance" "app_server" {
   ami           = "ami-0cf2b4e024cdb6960"
   instance_type = "t2.micro"
-  key_name = "alura-acesso-aws"
+  key_name      = "alura-acesso-aws"
 
   tags = {
-    Name = "Aws-ansible-python"
+    Name = "Aws-ansible"
   }
 }
+
+
+resource "aws_key_pair" "chaveSSH" {
+
+  key_name   = DEV
+  public_key = file("iac-dev.pub")
+
+}
+
