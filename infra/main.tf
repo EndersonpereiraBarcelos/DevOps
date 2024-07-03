@@ -19,7 +19,7 @@ resource "aws_instance" "app_server" {
   key_name      = var.chave
 
   tags = {
-    Name = "Aws-prod"
+    Name = var.name
   }
 }
 
@@ -29,4 +29,9 @@ resource "aws_key_pair" "chaveSSH" {
   key_name   = var.chave
   public_key = file("${var.chave}.pub")
 
+}
+
+output "IP_pub" {
+  value = aws_instance.app_server.public_ip
+  
 }

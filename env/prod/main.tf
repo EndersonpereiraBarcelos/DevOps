@@ -1,8 +1,17 @@
-module "aws-dev" {
+module "aws-prod" {
 
   source     = "../../infra"
   instacia   = "t2.micro"
   regiao_aws = "us-west-2"
   chave      = "iac-prod"
+  name = "producao"
+  description = "prod"
+  acesso_geral = "prod"
 
+}
+
+output "IP-prod" {
+
+  value = module.aws-prod.IP_pub
+  
 }
