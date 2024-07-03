@@ -1,20 +1,24 @@
 - hosts: terraform-ansible
   tasks:
-  - name: instalando python3, venv
-    apt: 
+  - name: Instalando o python3, virtualenv
+    apt:
       pkg:
       - python3
       - virtualenv
       update_cache: yes
     become: yes
-  - name: instalando dependencia
+  - name: Git Clone
+    ansible.builtin.git:
+      repo: https://github.com/guilhermeonrails/clientes-leo-api.git
+      dest: /home/ubuntu/tcc
+      version: master
+  - name: Instalando dependencias com pip (Django e Django Rest)
     pip:
       virtualenv: /home/ubuntu/tcc/venv
-      name:
-        - django
-        - djangorestframework
+      requiriments: /home/ubuntu/tcc/requiriments.py
+  - name: Alterando o hosts do settings
     lineinfile:
       path: /home/ubuntu/tcc/setup/settings.py
       regexp: 'ALLOWED_HOSTS'
       line: 'ALLOWED_HOSTS = ["*"]'
-      backrefs: yes 
+      backrefs: yes
