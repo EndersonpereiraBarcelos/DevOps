@@ -12,6 +12,7 @@
       repo: https://github.com/guilhermeonrails/clientes-leo-api.git
       dest: /home/ubuntu/tcc
       version: master
+      force: yes
   - name: Instalando dependencias com pip (Django e Django Rest)
     pip:
       virtualenv: /home/ubuntu/tcc/venv
@@ -24,3 +25,10 @@
       regexp: 'ALLOWED_HOSTS'
       line: 'ALLOWED_HOSTS = ["*"]'
       backrefs: yes
+  - name: configurando banco dados
+    shell:  '. /home/ubuntu/tcc/venv/bin/activate; python /home/ubuntu/tcc/manage.py migrate'
+  - name: carregando dados iniciais 
+    shell:  '. /home/ubuntu/tcc/venv/bin/activate; python /home/ubuntu/tcc/manage.py loaddata clientes.json'
+
+  - name: Iniciando servidor
+    shell: '. /home/ubuntu/tcc/venv/bin/activate; nohup python /home/ubuntu/tcc/manage.py runserver 0.0.0.0:8000'
