@@ -7,11 +7,15 @@ module "aws-prod" {
   name = "producao"
   description = "prod"
   acesso_geral = "prod"
+  grupoSegunca = "producao"
+  nameGrupo = "Prod"
+  maximo = 10
+  minimo =  1
 
 }
 
-output "IP-prod" {
+# output "IP-prod" {
 
-  value = module.aws-prod.IP_pub
+#   value = module.aws-prod.IP_pub
   
-}
+# }
