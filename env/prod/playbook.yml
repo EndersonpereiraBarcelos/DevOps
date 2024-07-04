@@ -15,7 +15,9 @@
   - name: Instalando dependencias com pip (Django e Django Rest)
     pip:
       virtualenv: /home/ubuntu/tcc/venv
-      requiriments: /home/ubuntu/tcc/requiriments.py
+      name:
+        - django
+        - djangorestframework
   - name: Alterando o hosts do settings
     lineinfile:
       path: /home/ubuntu/tcc/setup/settings.py
