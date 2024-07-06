@@ -18,10 +18,12 @@ variable "instacia" {
 }
 
 variable "acesso_geral" {
+
   type = string
 }
 
 variable "name" {
+
   type = string
 
 }
@@ -35,20 +37,25 @@ variable "description" {
 
 variable "grupoSegunca" {
 
-  type=string
-  
+  type = string
+
 }
 
 
 variable "nameGrupo" {
+
   type = string
+
 }
 
 variable "maximo" {
+
   type = number
+
 }
 
 variable "minimo" {
-  
+
   type = number
+
 }

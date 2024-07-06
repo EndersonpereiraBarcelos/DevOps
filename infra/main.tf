@@ -12,17 +12,6 @@ terraform {
 provider "aws" {
   region = var.regiao_aws
 }
-
-# resource "aws_instance" "app_server" {
-#   ami           = "ami-0cf2b4e024cdb6960"
-#   instance_type = var.instacia
-#   key_name      = var.chave
-
-#   tags = {
-#     Name = var.name
-#   }
-# }
-
 resource "aws_launch_template" "maquina" {
   image_id      = "ami-0cf2b4e024cdb6960"
   instance_type = var.instacia
@@ -41,11 +30,6 @@ resource "aws_key_pair" "chaveSSH" {
   public_key = file("${var.chave}.pub")
 
 }
-
-# output "IP_pub" {
-#   value = aws_instance.app_server.public_ip
-
-# }
 
 resource "aws_autoscaling_group" "instancia_com_template" {
   availability_zones = ["${var.regiao_aws}a", "${var.regiao_aws}b"]

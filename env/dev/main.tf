@@ -14,9 +14,3 @@ module "aws-dev" {
 
 
 }
-
-# output "IP-dev" {
-
-#   value = module.aws-dev.IP_pub
-
-# }

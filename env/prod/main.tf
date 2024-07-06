@@ -13,9 +13,3 @@ module "aws-prod" {
   minimo =  1
 
 }
-
-# output "IP-prod" {
-
-#   value = module.aws-prod.IP_pub
-  
-# }

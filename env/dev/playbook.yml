@@ -27,5 +27,3 @@
       regexp: 'ALLOWED_HOSTS'
       line: 'ALLOWED_HOSTS = ["*"]'
       backrefs: yes 
-  # - name: Start Projeto
-  #   shell: "source env/bin/activate  python manage.py runserver"
