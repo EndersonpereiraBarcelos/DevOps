@@ -7,11 +7,16 @@ module "aws-dev" {
   name         = "Desenvolvimento"
   description  = "dev"
   acesso_geral = "dev"
+  grupoSegunca = "Dev"
+  nameGrupo = "Dev"
+  maximo = 1
+  minimo =  0
+
 
 }
 
-output "IP-dev" {
+# output "IP-dev" {
 
-  value = module.aws-dev.IP_pub
+#   value = module.aws-dev.IP_pub
 
-}
+# }

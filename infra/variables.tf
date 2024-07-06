@@ -31,3 +31,24 @@ variable "description" {
   type = string
 
 }
+
+
+variable "grupoSegunca" {
+
+  type=string
+  
+}
+
+
+variable "nameGrupo" {
+  type = string
+}
+
+variable "maximo" {
+  type = number
+}
+
+variable "minimo" {
+  
+  type = number
+}
