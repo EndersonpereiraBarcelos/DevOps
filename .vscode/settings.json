@@ -1,0 +1,30 @@
+{
+    "workbench.iconTheme": "symbols",
+    "workbench.colorTheme": "Min Dark",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "workbench.editorAssociations": {
+        "file:/**/*.xlsx": "jupyter-data-wrangler"
+    },
+    "symbols.hidesExplorerArrows": false,
+    "snyk.yesWelcomeNotification": false,
+    "snyk.advanced.cliPath": "C:\\Users\\ender\\AppData\\Local\\snyk-ls\\snyk-win.exe",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "redhat.telemetry.enabled": true,
+    "vs-kubernetes": {
+        "vscode-kubernetes.kubectl-path-linux": "/home/enderson/.local/state/vs-kubernetes/tools/kubectl/kubectl",
+        "vscode-kubernetes.minikube-path-linux": "/home/enderson/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
+        "vscode-kubernetes.helm-path-linux": "/home/enderson/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm"
+    },
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "workbench.productIconTheme": "fluent-icons"
+}
